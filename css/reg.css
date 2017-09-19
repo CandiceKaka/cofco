@@ -1,0 +1,101 @@
+.content {
+  width: 1000px;
+  height: 500px;
+  margin: 0 auto;
+  position: relative;
+  background: url("http://localhost:8080/img/login/content.jpg");
+}
+
+.reg_form {
+  width: 312px;
+  height: 422px;
+  border: 2px solid #ebebeb;
+  position: absolute;
+  padding-top: 24px;
+  left: 14px;
+  top: 30px;
+  padding: 24px 34px 0;
+  background: #f7f8f8;
+}
+.reg_form h2 {
+  font-size: 16px;
+  color: #595757;
+  font-weight: bold;
+  float: left;
+}
+.reg_form .reg_login {
+  float: right;
+  margin-bottom: 26px;
+}
+.reg_form .reg_login span {
+  margin-right: 10px;
+}
+.reg_form .reg_login a {
+  color: #98c431;
+}
+.reg_form .input_wrap {
+  margin-bottom: 4px;
+  color: #aaa;
+}
+.reg_form .input_wrap input {
+  height: 26px;
+  width: 296px;
+  border: 1px solid #ccc;
+  padding-left: 6px;
+}
+.reg_form .input_wrap p {
+  visibility: hidden;
+  height: 24px;
+  line-height: 24px;
+  width: 290px;
+  padding-left: 6px;
+  background: #ffebec;
+  color: #ff8080;
+}
+.reg_form .check_code {
+  position: relative;
+  margin-bottom: 40px;
+}
+.reg_form .check_code input {
+  width: 170px;
+  border: 1px solid #ccc;
+  height: 26px;
+}
+.reg_form .check_code a {
+  position: absolute;
+  top: -24px;
+  right: 0;
+}
+.reg_form .check_code span {
+  display: inline-block;
+  width: 74px;
+  border: 1px solid #ccc;
+  padding: 1px;
+  height: 25px;
+  float: right;
+}
+.reg_form .agree {
+  height: 14px;
+  width: 14px;
+  margin-right: 6px;
+  background: green;
+  margin-bottom: 16px;
+}
+.reg_form .agree1 {
+  cursor: text;
+}
+.reg_form .reg {
+  width: 210px;
+  height: 30px;
+  background: url(../img/login/login.png) 0 -5px;
+  color: white;
+  cursor: pointer;
+}
+.reg_form .have_code {
+  float: right;
+  margin-top: 16px;
+  color: #8CB91E;
+}
+.reg_form .have_code:hover {
+  text-decoration: none;
+}

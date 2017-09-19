@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link href="http://localhost:8080/css/reset.css" rel="stylesheet" />
+		<link href="http://localhost:8080/css/reg.css" rel="stylesheet" />
+		<script data-main="../js/my/reg.js" src="../js/module/require.js"></script>
+	</head>
+	<body>
+		<!--公共的头部-->
+		<div id="common_top" style="width: 1002px;margin: 0 auto;"></div>
+		
+		<!--表单验证-->
+		<div class="content">
+			<form class="reg_form" action="../index.html">
+				<h2>注册我买网</h2>
+				<p class="reg_login"><span>已有我买网账号？</span><a href="javascript:">登录</a></p>
+				
+				<div class="input_wrap">
+					<input type="text" pattern="mobile" name="inputCheck" placeholder="邮箱/手机" />
+					<p class="info">手机号码格式不正确，请重新输入</p>
+				</div>
+			
+				<div class="input_wrap" >
+					<input type="text" pattern="username" name="inputCheck" placeholder="用户名"/>
+					<p class="info">请输入8-16位用户名且不能以数字开头</p>
+				</div>
+			
+				<div class="input_wrap">
+					<input type="password" pattern="passwords" name="inputCheck" placeholder="密码" />
+					<p class="info">密码长度必须为8-16个字符</p>
+				</div>
+			
+				<div class="input_wrap" >
+					<input type="password" class="sure_password" placeholder="确认密码"/>
+					<p class="info">两次输入的密码不一致，请重新输入</p>
+				</div>
+				<div class="check_code">
+					<input type="text"/>
+					<a href="javascript:">看不清，换一张</a>
+					<span class="code"></span>
+				</div>
+				
+				<input class="agree" type="checkbox"/><a class="agree1" href="javascript:">我已阅读并同意《我买网网上商城服务条款》</a>
+				<input class="reg" type="submit" value="立即注册">
+				<a class="have_code" href="javascript:">我有邀请码</a>
+			</form>
+		</div>
+		
+		<!--公共的底部-->
+		<div id="common_foot"></div>
+	</body>
+</html>

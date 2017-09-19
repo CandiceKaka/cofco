@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link href="http://localhost:8080/css/reset.css" rel="stylesheet" />
+		<link href="http://localhost:8080/css/common_top.css" rel="stylesheet" />
+		<!--<script data-main="./js/my/common_top.js" src="./js/module/require.js"></script>-->
+		<script data-main="http://localhost:8080/js/my/common_top.js" src="http://localhost:8080/js/module/require.js"></script>
+		
+		<!--搜索框建议的模版-->
+		<script type="text/html" id="sug_data_list">
+			<ul>
+				<%for(var i=0;i<data.length;i++) {%>
+					<li><%= data[i] %></li>
+				<%}%>
+			</ul>
+		</script>
+	
+	
+	
+	
+	</head>
+	<body>
+		<!--head开始-->
+		<div class="head">
+			<div class="center clear">
+				<div class="head_left clear fl">
+					<p class="current_city">当前城市:
+						<a href="javascript:">
+							<span href="javascript:">北京</span>
+							<i class="arrow_down"></i>
+						</a>
+					</p>
+					<p class="welcome clear fl">
+						<span class="name">hadddddi,</span>
+						<span>,您好，欢迎回来！</span>
+						<a class="login" href="javascript:">登陆</a>
+						<a href="javascript:">注册</a>
+					</p>
+				</div>
+				<div class="head_right fr">
+					<ul class="head_ul">
+						<li class="my_account">
+							<a class="my_account_a" href="javascript:">
+								我的账户
+							<i class="arrow_down"></i>
+							</a>
+							<dl class="droplist_my_account">
+								<dt><span>您还没有登录！</span><a class="my_login" href="#">登录</a></dt>
+								<dd><a href="javascript:">代付款订单</span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">我的消息</a></dd>
+								<dd><a href="javascript:">代签收订单</span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">我的订单</a></dd>
+								<dd><a href="javascript:">支付卡账户</span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">我的积分</a></dd>
+								<dd><a href="javascript:">优惠券/团购卡</span><a href="#">我的收藏</a></dd>
+								<dd><a href="javascript:">电子礼品卡</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">兑换券</a></dd>
+							</dl>
+						</li>
+						<li>
+							<a href="javascript:">
+								<i class="cart"></i>
+							购物车
+							<span class="count">10</span>件
+						</a>
+						</li>
+						<li  class="big_client">
+							<a class="big_client_a" href="javascript:">
+							客户服务
+							</a>
+							<i class="arrow_down"></i>
+							<dl class="droplist_big_client">
+								<dd><a href="javascript:">帮助中心</a></dd>
+								<dd><a href="javascript:">新手上路</span></dd>
+							</dl>
+						</li>
+						<li>
+							<a href="javascript:">大客户</a>
+						</li>
+						<li><a class="icbc" href="javascript:"></a></li>
+						<li><a class="zx" href="javascript:"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--head结束-->
+		
+		<!--logo一行部分开始-->
+		<div class="center logo_line clear">
+			<h1 class="fl clear">
+				<a class="logo" href="index.html">我买网</a>
+			</h1>
+			<div class="yue_bing fl">
+				<img src="http://localhost:8080/img/common_top/yue_bing.jpg" />
+			</div>
+			<form action="">
+				<input class="text" type="text" value="中秋进口礼 橄榄油低至149元" />
+				<input class="search" type="submit" value="搜索" />
+				<a class="more_search" href="javascript:">高级搜索</a>
+				<p class="suggest">
+					<a href="javascript:">月饼</a>
+					<a href="javascript:">大米</a>
+					<a href="javascript:">牛奶</a>
+					<a href="javascript:">牛排</a>
+					<a href="javascript:">水</a>
+					<a href="javascript:">大闸蟹</a>
+				</p>
+				<div class="sug_drop_list">
+				</div>
+			</form>
+			<div class="right_buy">
+				<img src="http://localhost:8080/img/common_top/top_buy.jpg" />
+			</div>
+		</div>
+		<!--logo一行部分结束-->
+		
+		<!--nav部分开始-->
+		<div class="nav_wrap">
+			<div class="nav center clear">
+				<div class="all_kinds">
+					<h2>全部商品分类</h2>
+					<ul class="kinds_ul">
+						<!--划过li的时候旁边的一大块-->
+						<div class="sub_wrap">
+							<dl class="sub_list clear">
+								<dt><a href="javascript:">精品水果</a></dt>
+								<dd>
+									<a href="javascript:">奇异果</a>
+									<a href="javascript:">橙子</a>
+									<a href="javascript:">苹果</a>
+									<a href="javascript:">热带水果</a>
+									<a href="javascript:">葡萄提子</a>
+									<a href="javascript:">瓜</a>
+									<a href="javascript:">芒果</a>
+								</dd>
+							</dl>
+							<dl class="sub_list clear">
+								<dt><a href="javascript:">海鲜水产</a></dt>
+								<dd>
+									<a href="javascript:">虾类</a>
+									<a href="javascript:">鱼类</a>
+									<a href="javascript:">贝类</a>
+									<a href="javascript:">海参</a>
+									<a href="javascript:">蟹类</a>
+									<a href="javascript:">鲍类</a>
+									<a href="javascript:">干货类</a>
+									<a href="javascript:">海鲜礼盒</a>
+								</dd>
+							</dl>
+							<dl class="sub_list clear">
+								<dt><a href="javascript:">生肉禽蛋</a></dt>
+								<dd>
+									<a href="javascript:">进口肉食</a>
+									<a href="javascript:">羊肉</a>
+									<a href="javascript:">牛肉</a>
+									<a href="javascript:">猪肉</a>
+									<a href="javascript:">禽肉</a>
+									<a href="javascript:">蛋类</a>
+								</dd>
+							</dl>
+							<dl class="sub_list clear">
+								<dt><a href="javascript:">精品蔬菜</a></dt>
+								<dd>
+									<a href="javascript:">有机蔬菜</a>
+									<a href="javascript:">精品蔬菜</a>
+									<a href="javascript:">加工蔬菜</a>
+									<a href="javascript:">冷冻蔬菜</a>
+								</dd>
+							</dl>
+							<dl class="sub_list clear">
+								<dt><a href="javascript:">低温食品</a></dt>
+								<dd>
+									<a href="javascript:">鲜奶</a>
+									<a href="javascript:">酸奶</a>
+									<a href="javascript:">黄油乳酪</a>
+									<a href="javascript:">低温果汁</a>
+									<a href="javascript:">低温饮品</a>
+								</dd>
+							</dl>
+							<dl class="sub_list clear">
+								<dt><a href="javascript:">低温食品</a></dt>
+								<dd>
+									<a href="javascript:">鲜奶</a>
+									<a href="javascript:">酸奶</a>
+									<a href="javascript:">黄油乳酪</a>
+									<a href="javascript:">低温果汁</a>
+									<a href="javascript:">低温饮品</a>
+								</dd>
+							</dl>
+						</div>
+						<li class="li-1">
+							<a href="javascript:">肉禽水产</a><a href="javascript:">水果蔬菜</a>
+						</li>
+						<li class="li-2"><a href="javascript:">进口生鲜</a><a href="javascript:">进口水果</a></li>
+						<li class="li-3"><a href="javascript:">进口食品</a><a href="javascript:">进口直采</a></li>
+						<li class="li-4"><a href="javascript:">酒</a><a href="javascript:">饮料/冲茶</a><a href="javascript:">茶</a></li>
+						<li class="li-5"><a href="javascript:">休闲食品</a><a href="javascript:">地方特产</a></li>
+						<li class="li-6"><a href="javascript:">营养健康</a><a href="javascript:">奶制品</a></li>
+						<li class="li-7"><a href="javascript:">粮油副食</a><a href="javascript:">调味干货</a></li>
+						<li class="li-8"><a href="javascript:">母婴食品</a><a href="javascript:">母婴用品</a></li>
+						<li class="li-9"><a href="javascript:">个护美妆</a><a href="javascript:">家用清洁</a></li>
+						<li class="li-10"><a href="javascript:">厨具家纺</a><a href="javascript:">家电3C</a></li>
+						<li class="li-11"><a href="javascript:">礼卡礼劵</a></li>
+					</ul>
+				</div>
+				<ul class="nav_ul">
+					<li><a href="javascript:">团购</a></li>
+					<li><a href="javascript:">每日鲜</a></li>
+					<li><a href="javascript:">我买酒</a></li>
+					<li><a href="javascript:">中粮出品</a></li>
+					<li><a href="javascript:">安心享</a></li>
+					<li><a href="javascript:">包邮直送</a></li>
+					<li><a href="javascript:">全球购</a></li>
+					<li><a href="javascript:">三同专区</a></li>
+				</ul>
+				
+					<div class="nav_cart">
+					<span class="cart_img">
+						<i class="nav_count"></i>
+					</span>
+					<a href="javascript:">购物车</a>
+					<span class="arrow_up"></span>
+					</div>
+					<div class="nav_cart_list">
+						<p>购物车空空如也，快去购点物吧</p>
+						<a href="#">去首页看看</a>
+					</div>
+			
+			</div>
+		</div>
+		<!--nav部分结束-->
+		
+		<!--右侧固定的导航栏开始-->
+		<div class="wm_fixed">
+			<div class="left_fixed">
+				<a class="fixed_cart">
+					<em></em>
+					<span class="one_cart">购物车</span>
+					<span class="two_count">10</span>
+				</a>
+				
+				<div class="left_fixed_bottom">
+					<a class="bg-1" href="javascript:">
+						<span>我的收藏</span>
+					</a>
+					
+					<a class="bg-2" href="javascript:">
+						<span>账户中心</span>
+					</a>
+					
+					<a class="bg-3" href="javascript:">
+						<span>在线充值</span>
+					</a>
+					
+					<a class="bg-4" href="javascript:">
+						<img src="http://localhost:8080/img/common_foot/two_code1.jpg"/>
+					</a>
+					
+					<a class="bg-5" href="javascript:">
+						<span>顶部</span>
+					</a>
+					
+				</div>
+				
+			</div>
+			
+			
+			
+			
+			<div class="right_fixed">1</div>
+		</div>
+		<!--右侧固定的导航栏结束-->
+		
+		
+		
+	</body>
+</html>

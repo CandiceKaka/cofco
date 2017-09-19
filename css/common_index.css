@@ -1,0 +1,45 @@
+.common_title {
+  height: 52px;
+  border-bottom: 1px solid #4bae00;
+  background: no-repeat;
+  background-position: 126px 20px;
+  background-image: url(../img/index/title_bg.jpg);
+}
+.common_title h2 {
+  font-size: 20px;
+  line-height: 52px;
+}
+
+.common_title_floor {
+  position: relative;
+  background-image: none;
+  border-bottom: 2px solid #88a9e2;
+}
+.common_title_floor h2 {
+  padding-left: 16px;
+  float: left;
+  line-height: 64px;
+  height: 52px;
+  color: #88a9e2;
+  margin-right: 180px;
+}
+.common_title_floor i {
+  display: block;
+  width: 5px;
+  height: 20px;
+  background: #88a9e2;
+  position: absolute;
+  top: 22px;
+}
+.common_title_floor span {
+  display: block;
+  height: 26px;
+  width: 76px;
+  float: left;
+  font-size: 16px;
+  padding-top: 24px;
+  margin-right: 40px;
+}
+.common_title_floor span:hover {
+  border-bottom: 2px solid #88a9e2;
+}

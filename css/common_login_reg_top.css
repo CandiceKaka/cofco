@@ -1,0 +1,14 @@
+h1 {
+  width: 1002px;
+  height: 80px;
+  padding-top: 12px;
+  margin: 0 auto;
+  border-bottom: 2px solid #479202;
+}
+h1 a {
+  display: block;
+  height: 80px;
+  width: 210px;
+  text-indent: -2000px;
+  background: url("http://localhost:8080/img/login/logo.png");
+}

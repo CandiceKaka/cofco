@@ -1,0 +1,118 @@
+.content {
+  width: 1000px;
+  height: 500px;
+  margin: 18px auto 8px;
+  position: relative;
+  background: url("http://localhost:8080/img/login/login_bg.jpg");
+}
+
+.wrap {
+  width: 378px;
+  height: 394px;
+  border: 4px solid #ebebeb;
+  position: absolute;
+  right: 34px;
+  top: 30px;
+  background: #f7f8f8;
+  padding-bottom: 20px;
+}
+.wrap .login_form {
+  padding: 22px 34px 0;
+  height: 389px;
+  border: 1px solid white;
+}
+.wrap .login_form form {
+  height: 234px;
+  border-bottom: 1px dashed #b4b4b4;
+}
+.wrap .login_form form input {
+  height: 26px;
+  border: 1px solid #ccc;
+  width: 302px;
+  margin-top: 26px;
+  padding-left: 8px;
+}
+.wrap .login_form form .login_btn {
+  border: none;
+  width: 200px;
+  height: 30px;
+  color: white;
+  margin-top: 38px;
+  font-weight: bold;
+  background: url(../img/login/login.png) 0 -37px;
+  float: left;
+}
+.wrap .login_form form .info_pass {
+  float: right;
+  position: absolute;
+  top: 105px;
+  right: 36px;
+}
+.wrap .login_form form .reg_a {
+  display: block;
+  width: 78px;
+  height: 28px;
+  text-align: center;
+  color: #479202;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 28px;
+  float: right;
+  margin-top: 38px;
+  background: url(../img/login/login.png) -89px -149px;
+}
+.wrap .other {
+  padding-top: 10px;
+}
+.wrap .other .other_list li {
+  float: left;
+  margin-top: 18px;
+  padding: 0 14px;
+  height: 20px;
+  border-right: 1px solid #ccc;
+}
+.wrap .other .other_list li a {
+  padding-left: 20px;
+}
+.wrap .other .other_list .other-1 {
+  background: url(../img/login/login.png) no-repeat -208px -75px;
+}
+.wrap .other .other_list .other-2 {
+  background: url(../img/login/login.png) no-repeat -208px -97px;
+}
+.wrap .other .other_list .other-3 {
+  background: url(../img/login/login.png) no-repeat -208px -119px;
+}
+.wrap .other .other_list .other-4 {
+  background: url(../img/login/login.png) no-repeat -208px -141px;
+}
+.wrap .other .other_list .other-5 {
+  background: url(../img/login/login.png) no-repeat -208px -163px;
+}
+.wrap .other .other_list .other-6 {
+  background: url(../img/login/login.png) no-repeat -208px -185px;
+}
+.wrap .other .other_list .other-7 {
+  background: url(../img/login/login.png) no-repeat -208px -207px;
+}
+.wrap .other .other_list .other-8 {
+  background: url(../img/login/login.png) no-repeat -208px -229px;
+}
+.wrap .other .other_list .other-9 {
+  background: url(../img/login/login.png) no-repeat -208px -251px;
+}
+.wrap .other .other_list li:nth-child(1), .wrap .other li:nth-child(4), .wrap .other li:nth-child(5), .wrap .other li:nth-child(8) {
+  padding-left: 0;
+}
+
+.wrap .other .other_list .other-4 {
+  background: url(../img/login/login.png) no-repeat -208px -137px;
+}
+
+.wrap .other .other_list .other-8 {
+  background: url(../img/login/login.png) no-repeat -208px -224px;
+}
+
+.wrap .other .other_list .other-9 {
+  background: url(../img/login/login.png) no-repeat -208px -242px;
+}

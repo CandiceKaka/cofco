@@ -1,0 +1,8 @@
+$colors: #fff, #000, red;
+$item: one, two, three;
+@for $i from 1 to 4 {
+    .#{nth($item, $i)} {
+        background-color: nth($colors, $i);
+        border:1px solde red;
+    }
+}

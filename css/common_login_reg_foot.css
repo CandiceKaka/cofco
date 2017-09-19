@@ -1,0 +1,14 @@
+.login_reg_foot {
+  background: #efefef;
+  padding-top: 6px;
+}
+.login_reg_foot p {
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.foot {
+  height: 28px;
+  background: #8cb91e;
+}
