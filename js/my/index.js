@@ -105,6 +105,7 @@ require(["http://localhost:8080/config.js"],function(){
 			});
 		}
 		
+		//回到顶部
 		function back2Top() {
 			$(".floor_nav .last").click(function(){
 				$(window).scrollTop(0);

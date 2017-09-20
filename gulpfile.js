@@ -12,9 +12,14 @@ var uglify = require("gulp-uglify");
 //即使刷新
 var connect = require("gulp-connect");
 
+//webserver
+var webserver = require("gulp-webserver");
+
+var proxy = require("http-proxy-middleware");
+
 //定义一个编译es6的任务 定义一个压缩js的任务
 gulp.task("es6js",function(){
-	gulp.src("./js/**/.js")
+	gulp.src("./js/*.js")
 		.pipe(bable({
 			presets:["es2015"]
 		}))

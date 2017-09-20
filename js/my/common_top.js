@@ -11,7 +11,6 @@ require(['http://localhost:8080/config.js'],function(){
 			}else {
 				this.value = this.value;
 			}
-			
 		})
 		
 		//搜索的时候,发送ajax出现提示框
@@ -48,7 +47,6 @@ require(['http://localhost:8080/config.js'],function(){
 				isShow=true;
 				$(".nav_cart_list").show();
 				this.style.border = "1px solid green";
-				
 			}
 		});
 		

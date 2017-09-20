@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link href="../css/reset.css" rel="stylesheet" />
+		<link href="../css/goods_list.css" rel="stylesheet"/>
+		<script data-main="../js/my/goods_list.js" src="../js/module/require.js"></script>
+		<script type="text/html" id="goods_list">
+			<ul class="goods_list">
+				<%for(var i in data) {%>
+					<li>
+						<a class="goods_img" href="./detail.html">
+							<img src="<%= data[i]['pic']%>"/>
+						</a>
+						<span class="goods_price"><%= data[i]['price2']['value'] %></span>
+						<a href="javascript:" class="title"><%= data[i]['name']%></a>
+						<div class="add_cart">
+							<a href="javasript:">已评价<em class="num"><%= data[i]['number'] %></em></a>
+							<a href="javascript:">收藏</a>
+							<a href="javascript:">加入购物车</a>
+						</div>
+					</li>
+				<%}%>
+			</ul>
+		</script>
+	</head>
+	<body>
+		<div id="common_top"></div>
+		<div class="top_img"></div>
+		<div class="list_top center">
+			<img src="../img/goods_list/good_list.jpg"/>
+		</div>
+		
+		<div class="goods_search center">
+			<span>食品></span><input type="text" placeholder="在当前条件下搜索" />
+		</div>
+		<div class="select clear center">
+			<dl class="brand_dl clear">
+				<dt>品牌</dt>
+				<dd class="a_dd clear">
+					<a href="#">出萃</a>
+					<a href="#">岸芷萱</a>
+					<a href="#">凌鲜</a>
+					<a href="#">时宜</a>
+					<a href="#">摧残</a>
+					<a href="#">出萃</a>
+					<a href="#">岸芷萱</a>
+					<a href="#">凌鲜</a>
+					<a href="#">时宜</a>
+					<a href="#">摧残</a>
+					<a href="#">出萃</a>
+					<a href="#">岸芷萱</a>
+					<a href="#">凌鲜</a>
+					<a href="#">时宜</a>
+				</dd>
+				<dd class="more1_dd">多选</dd>
+				<dd class="more2_dd">更多</dd>
+			</dl>
+			<dl class="place clear">
+				<dt>产地</dt>
+				<dd class="a_dd clear">
+					<a href="#">时宜</a>
+					<a href="#">摧残</a>
+					<a href="#">出萃</a>
+					<a href="#">岸芷萱</a>
+					<a href="#">凌鲜</a>
+					<a href="#">时宜</a>
+				</dd>
+				<dd class="more2_dd">更多</dd>
+				<dd class="more1_dd">多选</dd>
+			</dl>
+			<dl class="place clear">
+				<dt>切割蒂维</dt>
+				<dd class="a_dd clear">
+					<a href="#">时宜</a>
+					<a href="#">摧残</a>
+					<a href="#">出萃</a>
+					<a href="#">岸芷萱</a>
+					<a href="#">凌鲜</a>
+					<a href="#">时宜</a>
+				</dd>
+				<dd class="more2_dd">更多</dd>
+				<dd class="more1_dd">多选</dd>
+			</dl>
+			<dl class="place clear">
+				<dt>类别</dt>
+				<dd class="a_dd clear">
+					<a href="#">时宜</a>
+					<a href="#">摧残</a>
+					<a href="#">出萃</a>
+					<a href="#">岸芷萱</a>
+					<a href="#">凌鲜</a>
+					<a href="#">时宜</a>
+				</dd>
+				<dd class="more2_dd">更多</dd>
+				<dd class="more1_dd">多选</dd>
+			</dl>
+			<dl class="place clear">
+				<dt>原料茶地</dt>
+				<dd class="a_dd clear">
+					<a href="#">时宜</a>
+					<a href="#">摧残</a>
+					<a href="#">出萃</a>
+					<a href="#">岸芷萱</a>
+					<a href="#">凌鲜</a>
+					<a href="#">时宜</a>
+				</dd>
+				<dd class="more2_dd">更多</dd>
+				<dd class="more1_dd">多选</dd>
+			</dl>
+			<dl class="place clear">
+				<dt>其他</dt>
+				<dd class="a_dd clear">
+					<a href="#">时宜</a>
+					<a href="#">摧残</a>
+					<a href="#">出萃</a>
+					<a href="#">岸芷萱</a>
+					<a href="#">凌鲜</a>
+					<a href="#">时宜</a>
+				</dd>
+				<dd class="more2_dd">更多</dd>
+				<dd class="more1_dd">多选</dd>
+			</dl>
+		</div>
+		<div class="goods_wrap clear center">
+			<!--<ul class="goods_list">
+				<li>
+					<a class="goods_img" href="./detail.html"><img src="../img/common_foot/two_code1.jpg"/></a>
+					<span class="goods_price">￥14.50</span>
+					<a href="javascript:" class="title">【自营】一品玉和田枣五星(袋装 450*3克)</a>
+					<div class="add_cart">
+						<a href="javascript:">已评价<em class="num">1099</em></a>
+						<a href="javascript:">收藏</a>
+						<a href="javascript:">加入购物车</a>
+					</div>
+				</li>
+			</ul>-->
+		</div>
+		
+		<div id="common_foot"></div>
+	</body>
+	
+</html>

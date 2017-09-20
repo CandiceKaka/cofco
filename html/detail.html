@@ -3,7 +3,386 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<script src="../js/module/require.js" data-main="../js/my/detail.js"></script>
+		<link href="../css/reset.css" rel="stylesheet"/>
+		<link href="../css/detail.css" rel="stylesheet" />
+		<script type="text/html" id="common_list">
+			<%for(var i=0;i<data.length;i++) {%>
+				<dl class="common_con clear">
+					<dt>
+						<img src="../img/detail/people.png"/>
+						<i class="bg_line"></i>
+					</dt>
+					<dd>
+						<p class="time"><%= data[i].commenttime%></p>
+						<p><span class="common_user bolds"><%= data[i].username%></span><span class="green">普通会员</span></p>
+						<p><span class="bolds">评分:</span><span class="score"><%= data[i].score%></span></p>
+						<p><span class="bolds">标题:</span><span class="common_title1">热评好吃</span></p>
+						<p><span class="bolds">内容:</span><span class="common_cons"><%= data[i].comment%></span></p>
+						<p>赞(12)</p>
+					</dd>
+				</dl>
+			<%}%>
+		</script>
+		
+		
+		
 	</head>
 	<body>
+		<div id="common_top"></div>
+		<div class="kinds_of center clear">
+			<a href="#">食品></a>
+			<a href="#">休闲食品</a>
+			<a href="#">饼干蛋糕</a>
+			<a href="#">饼干</a>
+			<a href="#">好丽友</a>
+			<a href="#">【自营】好丽友 蘑菇力 红豆巧克力48g</a>
+		</div>
+		
+		<!--图片详情上半部分-->
+		<div class="detail_img clear center">
+			<!--左边图片-->
+			<div class="detail_left">
+				<div class="big_img">
+					<div class="rec"></div>
+					<img src="../img/detail/d11_middle.jpg"/>
+				</div>
+				<div class="scale_img">
+					<img src="../img/detail/d11_large.jpg" />
+				</div>
+				<ul class="small_img_list clear">
+					<li class="d0"></li>
+					<li class="d1"></li>
+					<li class="d2"></li>
+					<li class="d3"></li>
+					<li class="d4"></li>
+					<li class="d5"></li>
+					<li class="d6"></li>
+					<li class="d7"></li>
+					<li class="d8"></li>
+					<li class="d9"></li>
+				</ul>
+			</div>
+			<!--右面信息-->
+			<div class="detail_right">
+				<h2>【自营】好丽友 蘑菇力 红豆巧克力</h2>
+				<div class="now_price">
+					<span class="money">￥3.90</span>
+					<span class="kinds">零售价</span>
+					<span class="cut">(降价通知)</span>
+				</div>
+				<div class="send">
+					<div class="send1">
+						<span class="title">送至:</span>
+						<span class="dis">北京海淀区五环内</span>
+						<span>现在至明日0.00前完成下单，预计后天(9月21号送达)</span>
+					</div>
+					<div class="ser">
+						<span class="title">服务:</span>
+						<span>由我买网发货并提供售后服务</span>
+					</div>
+				</div>
+				
+				<div class="_taste">
+					<span class="taste">口味:</span>
+					<ul class="choose1 clear">
+						<li>
+							三连包<i></i>
+						</li>
+						<li>榛子<i></i></li>
+						<li>牛奶<i></i></li>
+						<li>红豆<i></i></li>
+					</ul>
+				</div>
+				<div class="_spec clear">
+					<span class="spec">规格:</span>
+					<ul class="clear g">
+						<li>144g<i></i></li>
+						<li>48g<i></i></li>
+					</ul>
+				</div>
+				<p class="choose clear">已选择
+					<span>红豆</span>
+					<span>48g</span>
+				</p>
+				<div class="notice">
+					<a href="javascript:">加入购物车</a>
+				</div>
+				
+				<div class="foru">
+					<p class="foru_title">为您推荐</p>
+					<dl class="foru_list">
+						<dt><img src="../img/detail/foru1.jpg"/></dt>
+						<dd>
+							<span class="for_title">【自营】好丽友提拉米苏12枚</span>
+							<span class="for_price">￥19.50</span>
+							<span class="ibuy">我要买</span>
+						</dd>
+					</dl>
+					<dl class="foru_list">
+						<dt><img src="../img/detail/foru2.jpg"/></dt>
+						<dd>
+							<span class="for_title">【自营】好丽友提拉米苏12枚</span>
+							<span class="for_price">￥19.50</span>
+							<span class="ibuy">我要买</span>
+						</dd>
+					</dl>
+				</div>
+				
+			</div>
+			
+			
+		</div>
+		
+		<p class="friend_info center">
+			提示:  该商品整箱装为32盒
+		</p>
+		
+		<!--优惠套餐-->
+		<div class="center cheap">
+			<h3>优惠套餐</h3>
+			<dl class="goods">
+				<dt><img src="../img/detail/detail11_middle.jpg"/></dt>
+				<dd>
+					<p>【自营】好丽友 蘑菇力 红豆巧克力</p>
+					<span>￥3.90</span>
+				</dd>
+			</dl>
+			<dl class="goods">
+				<dt><img src="../img/detail/d26.jpg"/></dt>
+				<dd>
+					<p>【自营】好丽友 蘑菇力 红豆巧克力</p>
+					<span>￥3.90</span>
+				</dd>
+			</dl>
+		</div>
+		
+		<div class="d_bottom center clear">
+			<div class="d_bottom_left">
+				<!--相关分类-->
+				<div class="rel_brand">
+					<ul class="rel_brand_list">
+						<h3>相关分类</h3>
+						<li><a href="#">威化</a></li>
+						<li><a href="#">曲奇</a></li>
+						<li><a href="#">面包/蛋糕</a></li>
+						<li><a href="#">蛋卷</a></li>
+						<li><a href="#">威化</a></li>
+						<li><a href="#">威化</a></li>
+						<li><a href="#">威化</a></li>
+						<li><a href="#">威化</a></li>
+						<li><a href="#">其他</a></li>
+					</ul>
+					<ul class="rel_brand_list">
+						<h3>相关分类</h3>
+						<li><a href="#">威化</a></li>
+						<li><a href="#">曲奇</a></li>
+						<li><a href="#">面包/蛋糕</a></li>
+						<li><a href="#">蛋卷</a></li>
+						<li><a href="#">威化</a></li>
+						<li><a href="#">威化</a></li>
+						<li><a href="#">威化</a></li>
+						<li><a href="#">威化</a></li>
+						<li><a href="#">其他</a></li>
+					</ul>
+				</div>
+				
+				<!--看了最终购买-->
+				<div class="last_buy">
+					<h3>看了最终购买</h3>
+					<dl class="last_list">
+						<dt><img src="../img/detail/last_buy.JPG"/></dt>
+						<dd>
+							<a href="#">20.94%购买:"【自营】好丽友Q蒂榛子巧克力"</a>
+							<p>￥20.90</p>
+						</dd>
+					</dl>
+					<dl class="last_list">
+						<dt><img src="../img/detail/last_buy.JPG"/></dt>
+						<dd>
+							<a href="#">20.94%购买:"【自营】好丽友Q蒂榛子巧克力"</a>
+							<p>￥20.90</p>
+						</dd>
+					</dl>
+					<dl class="last_list">
+						<dt><img src="../img/detail/last_buy.JPG"/></dt>
+						<dd>
+							<a href="#">20.94%购买:"【自营】好丽友Q蒂榛子巧克力"</a>
+							<p>￥20.90</p>
+						</dd>
+					</dl>
+					<dl class="last_list">
+						<dt><img src="../img/detail/last_buy.JPG"/></dt>
+						<dd>
+							<a href="#">20.94%购买:"【自营】好丽友Q蒂榛子巧克力"</a>
+							<p>￥20.90</p>
+						</dd>
+					</dl>
+					<dl class="last_list">
+						<dt><img src="../img/detail/last_buy.JPG"/></dt>
+						<dd>
+							<a href="#">20.94%购买:"【自营】好丽友Q蒂榛子巧克力"</a>
+							<p>￥20.90</p>
+						</dd>
+					</dl>
+					<dl class="last_list">
+						<dt><img src="../img/detail/last_buy.JPG"/></dt>
+						<dd>
+							<a href="#">20.94%购买:"【自营】好丽友Q蒂榛子巧克力"</a>
+							<p>￥20.90</p>
+						</dd>
+					</dl>
+				</div>
+			
+				<!--买了还买-->
+				<div class="last_buy">
+					<h3>买了还买</h3>
+					<dl class="last_list">
+						<dt><img src="../img/detail/last_buy.JPG"/></dt>
+						<dd>
+							<a href="#">20.94%购买:"【自营】好丽友Q蒂榛子巧克力"</a>
+							<p>￥20.90</p>
+						</dd>
+					</dl>
+					<dl class="last_list">
+						<dt><img src="../img/detail/last_buy.JPG"/></dt>
+						<dd>
+							<a href="#">20.94%购买:"【自营】好丽友Q蒂榛子巧克力"</a>
+							<p>￥20.90</p>
+						</dd>
+					</dl>
+					<dl class="last_list">
+						<dt><img src="../img/detail/last_buy.JPG"/></dt>
+						<dd>
+							<a href="#">20.94%购买:"【自营】好丽友Q蒂榛子巧克力"</a>
+							<p>￥20.90</p>
+						</dd>
+					</dl>
+					<dl class="last_list">
+						<dt><img src="../img/detail/last_buy.JPG"/></dt>
+						<dd>
+							<a href="#">20.94%购买:"【自营】好丽友Q蒂榛子巧克力"</a>
+							<p>￥20.90</p>
+						</dd>
+					</dl>
+					<dl class="last_list">
+						<dt><img src="../img/detail/last_buy.JPG"/></dt>
+						<dd>
+							<a href="#">20.94%购买:"【自营】好丽友Q蒂榛子巧克力"</a>
+							<p>￥20.90</p>
+						</dd>
+					</dl>
+					<dl class="last_list">
+						<dt><img src="../img/detail/last_buy.JPG"/></dt>
+						<dd>
+							<a href="#">20.94%购买:"【自营】好丽友Q蒂榛子巧克力"</a>
+							<p>￥20.90</p>
+						</dd>
+					</dl>
+				</div>
+			
+			</div>
+			<div class="d_bottom_right">
+				<div class="cat_point">
+					<a href="#">商品详情</a>
+					<a href="#common">评论52</a>
+					<a href="#expert">食品网购专家</a>
+				</div>
+				
+				<ul class="detail_mesg clear">
+					<li>品牌: 好丽友</li>
+					<li>规格: 48g</li>
+					<li>产地: 河北</li>
+					<li>保质期(天): 365</li>
+					<li>商品毛重: 67.0克</li>
+				</ul>
+				
+				<div class="info_text">
+					<p>中粮我买网所说欧商品均经严格的供应商自制什哈、商品介绍，
+						中粮我买网所说欧商品均经严格的供应商自制什哈、
+						中粮我买网所说
+						中粮我买网所说欧商品均经严格的供应商自制什哈、
+						商品介绍，中粮我买网所说欧商品均经严格的供应商自制什哈、商品介绍，</p>
+				</div>
+				
+				<p class="goods_name">
+					【自营】好丽友 蘑菇力 红豆巧克力 48g
+				</p>
+				<div class="d_img_wrap">
+					<img src="../img/detail/d_img1.jpg"/>
+					<img src="../img/detail/d_img2.jpg" />
+				</div>
+				
+				<!--商品评价-->
+				<div class="common" id="common">
+					<div class="common_title">
+						<p>商品评价</p>
+						<div class="common_info clear">
+							<div class="left">
+								<img src="../img/detail/4.png"/>
+								<span>口碑:0</span>
+								<span>评价:52条</span>
+							</div>
+							<div class="right clear">
+								<span class="i_common">我要评价</span>
+								<div class="encourage">购买并评价商品，审后得<span class="red">10</span>积分!<span class="red">前五位</span>通过审核的买友可获双倍积分!<a class="green" href="#">积分规则</a>
+								</div>
+								<dl class="people">
+									<dt>
+										<img src="../img/detail/people.png"/>
+									</dt>
+									<dd>w**e666</dd>
+								</dl>
+								<dl class="people">
+									<dt>
+										<img src="../img/detail/people.png"/>
+									</dt>
+									<dd>w**e666</dd>
+								</dl>
+								<dl class="people">
+									<dt>
+										<img src="../img/detail/people.png"/>
+									</dt>
+									<dd>w**e666</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+					<ul class="common_kinds">
+						<li><a href="#">全部(52)</a></li>
+						<li><a href="#">好评(0)</a></li>
+						<li><a href="#">中评(0)</a></li>
+						<li><a href="#">差评(0)</a></li>
+						<li><a href="#">口碑(0)</a></li>
+					</ul>
+					
+					<!--模版生成-->
+					<div class="common_con_wrap">
+						<dl class="common_con clear">
+							<dt>
+								<img src="../img/detail/people.png"/>
+								<i class="bg_line"></i>
+							</dt>
+							<dd>
+								<p class="time">2017-08-08 12:17</p>
+								<p><span class="common_user bolds">鱼儿沟</span><span class="green">普通会员</span></p>
+								<p><span class="bolds">评分:</span><span class="score">5分</span></p>
+								<p><span class="bolds">标题:</span><span class="common_title1">热评好吃</span></p>
+								<p><span class="bolds">内容:</span><span class="common_cons">给儿子买的，儿子很喜欢</span></p>
+								<p>赞(12)</p>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				
+				<!--食品专家-->
+				<div class="" id="expert"></div>
+			</div>
+			
+		</div>
+		
+			
+		<!--<div id="common_foot"></div>-->
+		
 	</body>
 </html>
