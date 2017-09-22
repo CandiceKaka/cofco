@@ -1,6 +1,16 @@
-require(['http://localhost:8080/config.js'],function(){
+require(['/config.js'],function(){
 	
-	require(['jquery','template'],function($,tmp){
+	require(['jquery','template','cookie'],function($,tmp,cookie){
+		
+//		划过Li
+		$(".all_kinds").on("mouseenter",function(){
+			$(".sub_wrap").show(15);
+		});
+		
+		$(".all_kinds").on("mouseleave",function(){
+			$(".sub_wrap").hide(15);
+		})
+		
 		
 		var $inpText = $(".text");
 		
@@ -50,9 +60,58 @@ require(['http://localhost:8080/config.js'],function(){
 			}
 		});
 		
-	
+		//右侧固定的额导航栏
+		$(".fixed_cart").on("click",function(){
+			if( parseInt($(".wm_fixed").css("right"))==0 ) {
+				$(".wm_fixed").animate({"right":"-276px"},500);
+			}else {
+				$(".wm_fixed").animate({"right":"0"},500);
+			}
+		});
+
+		//固定导航栏中的商品信息
+		
+		//从cookie中获取数据，然后加入到固定导航栏的购物车列表
+		var goods_list = JSON.parse(cookie.get("goods"));
+		$(".cart_detail").html(tmp.template("cart_list",goods_list));
+		
+		//给整个右侧的固定框添加一个委托事件
+		$(".right_fixed").on("click",function(ev){
+//			console.log(cookie.get("goods"));
+			var target = ev.target;
+			//删除功能
+			if(target.className == "dis") {
+				$(target).parent().parent().parent().animate({"right":"-276px"},500);
+			}
+			if(target.className == "del") {
+				//被删除的商品的名称
+				var _title = $(target).parent().children().eq(0).text();
+				//删除节点
+				$(target).parent().parent().remove();
+				//从cookie中移除
+				//吧名称和删除的节点名称不相等的数据保留
+				var new_array = goods_list.filter(function(item,index,array){
+					return item.title !== _title;
+				});
+				
+				var str = JSON.stringify(new_array);
+				//从数组中删除那个元素
+				cookie.set("goods",str,7);
+			}
+			
+			
+		});
+		
+		var all_num = 0;
+		var all_money = 0
+		for(var i=0;i<goods_list.length;i++) {
+			all_num += goods_list[i].num;
+			all_money +=  goods_list[i].goods_price * goods_list[i].num;
+//			console.log((0,goods_list[i].goods_price),Number(goods_list[i].goods_price),goods_list[i].num);
+		}
+//		console.log(all_money);
+		
+		$(".all_num").text(all_num);
+		$(".all_money").text(all_money);
 	});
-	
-	
-	
 });

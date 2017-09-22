@@ -1,23 +1,14 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-		<link href="http://localhost:8080/css/reset.css" rel="stylesheet" />
-		<link href="http://localhost:8080/css/common_top.css" rel="stylesheet" />
-		<!--<script data-main="./js/my/common_top.js" src="./js/module/require.js"></script>-->
-		<script data-main="http://localhost:8080/js/my/common_top.js" src="http://localhost:8080/js/module/require.js"></script>
-		
-		<!--搜索框建议的模版-->
-		<script type="text/html" id="sug_data_list">
-			<ul>
-				<%for(var i=0;i<data.length;i++) {%>
-					<li><%= data[i] %></li>
-				<%}%>
-			</ul>
-		</script>
-	</head>
-	<body>
+<div>
+	<link href="/css/reset.css" rel="stylesheet" />
+	<link href="/css/common_top.css" rel="stylesheet" />
+	<script data-main="/js/my/common_top.js" src="/js/module/require.js"></script>
+	<script type="text/html" id="sug_data_list">
+		<ul>
+			<%for(var i=0;i<data.length;i++) {%>
+				<li><%= data[i] %></li>
+			<%}%>
+		</ul>
+	</script>
 		<!--head开始-->
 		<div class="head">
 			<div class="center clear">
@@ -31,8 +22,8 @@
 					<p class="welcome clear fl">
 						<span class="name">hadddddi,</span>
 						<span>,您好，欢迎回来！</span>
-						<a class="login" href="javascript:">登陆</a>
-						<a href="javascript:">注册</a>
+						<a class="login" href="/html/login.html">登陆</a>
+						<a href="/html/reg.html">注册</a>
 					</p>
 				</div>
 				<div class="head_right fr">
@@ -85,7 +76,7 @@
 				<a class="logo" href="index.html">我买网</a>
 			</h1>
 			<div class="yue_bing fl">
-				<img src="http://localhost:8080/img/common_top/yue_bing.jpg" />
+				<img src="/img/common_top/yue_bing.jpg" />
 			</div>
 			<form action="">
 				<input class="text" type="text" value="中秋进口礼 橄榄油低至149元" />
@@ -103,7 +94,7 @@
 				</div>
 			</form>
 			<div class="right_buy">
-				<img src="http://localhost:8080/img/common_top/top_buy.jpg" />
+				<img src="/img/common_top/top_buy.jpg" />
 			</div>
 		</div>
 		<!--logo一行部分结束-->
@@ -219,7 +210,6 @@
 						<p>购物车空空如也，快去购点物吧</p>
 						<a href="#">去首页看看</a>
 					</div>
-			
 			</div>
 		</div>
 		<!--nav部分结束-->
@@ -247,25 +237,49 @@
 					</a>
 					
 					<a class="bg-4" href="javascript:">
-						<img src="http://localhost:8080/img/common_foot/two_code1.jpg"/>
+						<img src="/img/common_foot/two_code1.jpg"/>
 					</a>
 					
 					<a class="bg-5" href="javascript:">
 						<span>顶部</span>
 					</a>
-					
 				</div>
-				
 			</div>
-			
-			
-			
-			
-			<div class="right_fixed">1</div>
+			<div class="right_fixed">
+				<h3 class="clear">我的购物车<span class="dis">x</span></h3>	
+				<!--模版生成购物车详细列表-->
+				<div class="cart_detail">
+				</div>
+				<!--底部结算-->
+				<div class="cart_bottom">
+					<p class="clear">
+						<span class="num">已选</span><i class="all_num">9</i><span>件</span>
+						<span class="money" class="red all_money">￥329.30</span>
+					</p>
+					<div class="give">结算</div>
+				</div>
+			</div>
 		</div>
 		<!--右侧固定的导航栏结束-->
+		<script type="text/html" id="cart_list">
+			<%for(var i=0;i<data.length;i++) {%>
+				<dl class="clear">
+					<dt>
+						<a class="clear" href="#">
+							<img src= "<%= data[i].img_url%>"/>
+						</a>
+					</dt>
+					<dd>
+						<a class="cart_title" href="#"><%= data[i].title%></a>
+						<span class="red"><%= data[i].goods_price%></span>
+						<span class="red">x</span>
+						<span class="red"><%= data[i].num%></span>
+						<a class="del" href="##">删除</a>
+					</dd>
+					
+				</dl>
+			<%}%>
+		</script>
 		
 		
-		
-	</body>
-</html>
+</div>

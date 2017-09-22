@@ -2,6 +2,39 @@
   text-align: center;
 }
 
+.xiding {
+  display: none;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  text-align: center;
+  z-index: 1500;
+  height: 78px;
+  background: white;
+  padding: 0;
+  margin: 0 auto;
+}
+.xiding .logo_line {
+  height: 78px;
+}
+.xiding h1 {
+  margin-left: -783px;
+  margin-right: 160px;
+  height: 78px;
+  width: 248px;
+  text-indent: -2000px;
+  display: inline-block;
+}
+.xiding h1 a {
+  margin-top: 0px;
+}
+.xiding form {
+  display: inline-block;
+  float: none;
+  top: -27px;
+  position: absolute;
+}
+
 #swiper-container1 {
   background: red;
   width: 100%;
@@ -29,10 +62,10 @@
   z-index: 600;
 }
 #swiper-container1 .swiper-button-prev {
-  left: 29.4%;
+  left: 27.4%;
 }
 #swiper-container1 .swiper-button-next {
-  left: 69.2%;
+  left: 65.7%;
 }
 
 .banner_right {
@@ -342,8 +375,8 @@
   float: left;
   border: 1px solid #ccc;
   border-left: none;
-  width: 181px;
-  height: 234px;
+  width: 180px;
+  height: 235px;
   margin-top: -1px;
   padding: 6px 30px 10px;
   position: relative;
@@ -607,7 +640,7 @@
   display: none;
   position: fixed;
   top: 20%;
-  left: 250px;
+  left: 200px;
 }
 .floor_nav li {
   width: 45px;

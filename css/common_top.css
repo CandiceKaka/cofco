@@ -302,10 +302,12 @@ form .text {
   height: 0;
 }
 .sug_drop_list ul {
+  position: relative;
   background: white;
   width: 452px;
   padding: 8px 14px 4px;
   border: 1px solid #ccc;
+  z-index: 1000;
 }
 .sug_drop_list li {
   line-height: 26px;
@@ -348,11 +350,11 @@ form .text {
   width: 358px;
   position: absolute;
   right: 346px;
-  top: 234px;
+  top: 334px;
   z-index: 500;
   display: none;
   border: 1px solid green;
-  background: url(../img/common_top/cart_bg.png) center no-repeat;
+  background: white url(/img/common_top/cart_bg.png) center no-repeat;
   text-align: center;
   padding-bottom: 4px;
 }
@@ -372,7 +374,7 @@ form .text {
   position: absolute;
   left: 48px;
   top: 10px;
-  background: url(../img/common_top/index_top_sprites.png) -46px 5px;
+  background: url(/img/common_top/index_top_sprites.png) -46px 5px;
 }
 
 .nav_count {
@@ -382,7 +384,7 @@ form .text {
   position: absolute;
   top: -15px;
   left: 10px;
-  background: url(../img/common_top/index_top_sprites.png) -10px -40px;
+  background: url(/img/common_top/index_top_sprites.png) -10px -40px;
 }
 
 .nav_cart a {
@@ -412,6 +414,7 @@ form .text {
   float: left;
   position: absolute;
   z-index: 1000;
+  background: red;
 }
 
 .all_kinds h2 {
@@ -432,8 +435,8 @@ form .text {
 }
 
 .kinds_ul li {
-  height: 40px;
-  line-height: 40px;
+  height: 38px;
+  line-height: 38px;
   padding-left: 20px;
 }
 
@@ -599,7 +602,7 @@ form .text {
   background: white;
   padding-top: 30px;
   margin-top: 2px;
-  height: 430px;
+  height: 418px;
   border: 1px solid #8cb91e;
   border-left: none;
   display: none;
@@ -677,7 +680,7 @@ form .text {
   display: block;
   width: 20px;
   height: 34px;
-  background: url("http://localhost:8080//img/common_top/cart.jpg") -178px 0;
+  background: url("/img/common_top/cart.jpg") -178px 0;
 }
 .wm_fixed .left_fixed .fixed_cart .one_cart {
   color: white;
@@ -703,7 +706,7 @@ form .text {
   background: black;
 }
 .wm_fixed .left_fixed .fixed_cart:hover em {
-  background: url("http://localhost:8080//img/common_top/cart.jpg") -178px -34px;
+  background: url("/img/common_top/cart.jpg") -178px -34px;
 }
 .wm_fixed .left_fixed .left_fixed_bottom {
   display: block;
@@ -745,38 +748,111 @@ form .text {
   display: none;
 }
 .wm_fixed .left_fixed .left_fixed_bottom .bg-1 {
-  background: url("http://localhost:8080/img/common_top/cart.jpg") 0px 0px;
+  background: url("/img/common_top/cart.jpg") 0px 0px;
 }
 .wm_fixed .left_fixed .left_fixed_bottom .bg-1:hover {
-  background: url("http://localhost:8080/img/common_top/cart.jpg") 0px -34px;
+  background: url("/img/common_top/cart.jpg") 0px -34px;
 }
 .wm_fixed .left_fixed .left_fixed_bottom .bg-2 {
-  background: url("http://localhost:8080/img/common_top/cart.jpg") -33px 0px;
+  background: url("/img/common_top/cart.jpg") -33px 0px;
 }
 .wm_fixed .left_fixed .left_fixed_bottom .bg-2:hover {
-  background: url("http://localhost:8080/img/common_top/cart.jpg") -33px -34px;
+  background: url("/img/common_top/cart.jpg") -33px -34px;
 }
 .wm_fixed .left_fixed .left_fixed_bottom .bg-3 {
-  background: url("http://localhost:8080/img/common_top/cart.jpg") -66px 0px;
+  background: url("/img/common_top/cart.jpg") -66px 0px;
 }
 .wm_fixed .left_fixed .left_fixed_bottom .bg-3:hover {
-  background: url("http://localhost:8080/img/common_top/cart.jpg") -66px -34px;
+  background: url("/img/common_top/cart.jpg") -66px -34px;
 }
 .wm_fixed .left_fixed .left_fixed_bottom .bg-4 {
-  background: url("http://localhost:8080/img/common_top/cart.jpg") -99px 0px;
+  background: url("/img/common_top/cart.jpg") -99px 0px;
 }
 .wm_fixed .left_fixed .left_fixed_bottom .bg-4:hover {
-  background: url("http://localhost:8080/img/common_top/cart.jpg") -99px -34px;
+  background: url("/img/common_top/cart.jpg") -99px -34px;
 }
 .wm_fixed .left_fixed .left_fixed_bottom .bg-5 {
-  background: url("http://localhost:8080/img/common_top/cart.jpg") -132px 0px;
+  background: url("/img/common_top/cart.jpg") -132px 0px;
 }
 .wm_fixed .left_fixed .left_fixed_bottom .bg-5:hover {
-  background: url("http://localhost:8080/img/common_top/cart.jpg") -132px -34px;
+  background: url("/img/common_top/cart.jpg") -132px -34px;
 }
 .wm_fixed .right_fixed {
   background: #e6e6e6;
-  width: 276px;
+  width: 240px;
   height: 100%;
+  float: right;
+  overflow: auto;
+  padding: 8px 18px 0px;
+}
+.wm_fixed .right_fixed .red {
+  color: red;
+}
+.wm_fixed .right_fixed h3 {
+  font-size: 18px;
+  text-align: center;
+}
+.wm_fixed .right_fixed h3 span {
+  float: right;
+  font-size: 22px;
+  margin-top: -6px;
+}
+.wm_fixed .right_fixed dl {
   float: left;
+  margin-top: 16px;
+  height: 52px;
+  width: 240px;
+}
+.wm_fixed .right_fixed dl dt a {
+  display: block;
+  float: left;
+}
+.wm_fixed .right_fixed dl dt a img {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ccc;
+}
+.wm_fixed .right_fixed dl dd {
+  padding-left: 4px;
+  float: left;
+}
+.wm_fixed .right_fixed dl dd .cart_title {
+  width: 170px;
+  height: 32px;
+  overflow: hidden;
+  line-height: 16px;
+  display: block;
+}
+.wm_fixed .right_fixed dl dd .del {
+  float: right;
+}
+.wm_fixed .right_fixed .cart_detail {
+  padding-bottom: 100px;
+  overflow: hidden;
+}
+.wm_fixed .right_fixed .cart_bottom {
+  height: 68px;
+  padding-top: 4px;
+  background: #e6e6e6;
+  position: fixed;
+  z-index: 200;
+  bottom: 0;
+}
+.wm_fixed .right_fixed .cart_bottom p {
+  margin-bottom: 6px;
+}
+.wm_fixed .right_fixed .cart_bottom p .num {
+  float: left;
+}
+.wm_fixed .right_fixed .cart_bottom p .money {
+  float: right;
+}
+.wm_fixed .right_fixed .cart_bottom .give {
+  color: white;
+  width: 240px;
+  height: 40px;
+  background: #dd0800;
+  text-align: center;
+  font-size: 16px;
+  line-height: 40px;
 }

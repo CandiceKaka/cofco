@@ -2,28 +2,10 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
-		<link href="../css/reset.css" rel="stylesheet" />
-		<link href="../css/goods_list.css" rel="stylesheet"/>
+		<title>goods_list</title>
+		<link href="/css/reset.css" rel="stylesheet" />
+		<link href="/css/goods_list.css" rel="stylesheet"/>
 		<script data-main="../js/my/goods_list.js" src="../js/module/require.js"></script>
-		<script type="text/html" id="goods_list">
-			<ul class="goods_list">
-				<%for(var i in data) {%>
-					<li>
-						<a class="goods_img" href="./detail.html">
-							<img src="<%= data[i]['pic']%>"/>
-						</a>
-						<span class="goods_price"><%= data[i]['price2']['value'] %></span>
-						<a href="javascript:" class="title"><%= data[i]['name']%></a>
-						<div class="add_cart">
-							<a href="javasript:">已评价<em class="num"><%= data[i]['number'] %></em></a>
-							<a href="javascript:">收藏</a>
-							<a href="javascript:">加入购物车</a>
-						</div>
-					</li>
-				<%}%>
-			</ul>
-		</script>
 	</head>
 	<body>
 		<div id="common_top"></div>
@@ -139,6 +121,27 @@
 		</div>
 		
 		<div id="common_foot"></div>
+		
+		<script type="text/html" id="goods_list">
+			<ul class="goods_list">
+				<%for(var i in data) {%>
+					<li>
+						<a class="goods_img" href="./detail.html">
+							<img src="<%= data[i]['pic']%>"/>
+						</a>
+						<span class="goods_price"><%= data[i]['price2']['value'] %></span>
+						<a href="javascript:" class="title"><%= data[i]['name']%></a>
+						<div class="add_cart">
+							<a href="javasript:">已评价<em class="num"><%= data[i]['number'] %></em></a>
+							<a href="javascript:">收藏</a>
+							<a class="real_add_cart" href="###">加入购物车</a>
+						</div>
+					</li>
+				<%}%>
+			</ul>
+		</script>
+		
+		
 	</body>
 	
 </html>

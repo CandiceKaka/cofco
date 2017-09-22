@@ -1,5 +1,31 @@
-require(["http://localhost:8080/config.js"],function(){
+require(["/config.js"],function(){
 	require(["jquery","common"],function($){
+		
+		//随机生成一个min-max之间的数字
+		function randomInt(min,max) {
+			return Math.round(Math.random()*(max-min)) + min;
+		}
+		//随机生成一个指定长度的验证码
+		function createCode(len) {
+			var str = " ";
+			for(var i=0;i<len;i++) {
+				var ascii = randomInt(48,90);
+				
+				//随机结果不符合要求，重新生成。
+				while(ascii >=58 && ascii <=64) {
+					ascii = randomInt(48,90);
+				}
+				str += String.fromCharCode(ascii);
+			}
+			return str;
+		}
+		
+		$(".code").text(createCode(4));
+		$(".change,.code").on("click",function(){
+			var code = createCode(4);
+			$(".code").get(0).innerText = code;
+		})
+		
 		//引入公共的头部和底部
 		$("#common_top").load("./common_login_reg_top.html");
 		$("#common_foot").load("./common_login_reg_foot.html");

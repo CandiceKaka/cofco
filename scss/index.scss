@@ -1,6 +1,38 @@
 .top_img {
     text-align: center;
 }
+.xiding {
+    display: none;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    text-align: center;
+    z-index: 1500;
+    height: 78px;
+    background: white;
+    padding: 0;
+    margin: 0 auto;
+    .logo_line {
+        height: 78px;
+    }
+    h1 {
+        margin-left: -783px;
+        margin-right: 160px;
+        height: 78px;
+        width: 248px;
+        text-indent: -2000px;
+        display: inline-block;
+        a {
+            margin-top: 0px;
+        }
+    }
+    form {
+        display: inline-block;
+        float: none;
+        top: -27px;
+        position: absolute;
+    }
+}
 
 #swiper-container1 {
     background: red;
@@ -32,10 +64,10 @@
         
     }
     .swiper-button-prev {
-        left: 29.4%;
+        left: 27.4%;
     }
     .swiper-button-next {
-        left: 69.2%;
+        left: 65.7%;
     }
 }
 
@@ -368,8 +400,8 @@
                         float: left;
                         border: 1px solid #ccc;
                         border-left: none;
-                        width: 181px;
-                        height: 234px;
+                        width: 180px;
+                        height: 235px;
                         margin-top: -1px;
                         padding: 6px 30px 10px;
                         position: relative;
@@ -494,7 +526,7 @@ $items:first_floor1,second_floor,third,fourth,fifth,six,seven,eight,nine,ten,ele
     display: none;
     position: fixed;
     top: 20%;
-    left: 250px;
+    left: 200px;
     li {
         width: 45px;
         position: relative;

@@ -10,5 +10,5 @@ h1 a {
   height: 80px;
   width: 210px;
   text-indent: -2000px;
-  background: url("http://localhost:8080/img/login/logo.png");
+  background: url(../img/login/logo.png) no-repeat;
 }

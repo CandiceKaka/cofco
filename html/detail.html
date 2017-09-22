@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>detail</title>
 		<script src="../js/module/require.js" data-main="../js/my/detail.js"></script>
 		<link href="../css/reset.css" rel="stylesheet"/>
 		<link href="../css/detail.css" rel="stylesheet" />
@@ -24,9 +24,6 @@
 				</dl>
 			<%}%>
 		</script>
-		
-		
-		
 	</head>
 	<body>
 		<div id="common_top"></div>
@@ -87,7 +84,7 @@
 					<span class="taste">口味:</span>
 					<ul class="choose1 clear">
 						<li>
-							三连包<i></i>
+						三连包<i></i>
 						</li>
 						<li>榛子<i></i></li>
 						<li>牛奶<i></i></li>
@@ -106,8 +103,9 @@
 					<span>48g</span>
 				</p>
 				<div class="notice">
-					<a href="javascript:">加入购物车</a>
+					<a class="add_cart" href="###">加入购物车</a>
 				</div>
+				
 				
 				<div class="foru">
 					<p class="foru_title">为您推荐</p>
@@ -130,8 +128,6 @@
 				</div>
 				
 			</div>
-			
-			
 		</div>
 		
 		<p class="friend_info center">
@@ -356,33 +352,77 @@
 						<li><a href="#">口碑(0)</a></li>
 					</ul>
 					
-					<!--模版生成-->
+					<!--模版生成评论-->
 					<div class="common_con_wrap">
-						<dl class="common_con clear">
-							<dt>
-								<img src="../img/detail/people.png"/>
-								<i class="bg_line"></i>
-							</dt>
-							<dd>
-								<p class="time">2017-08-08 12:17</p>
-								<p><span class="common_user bolds">鱼儿沟</span><span class="green">普通会员</span></p>
-								<p><span class="bolds">评分:</span><span class="score">5分</span></p>
-								<p><span class="bolds">标题:</span><span class="common_title1">热评好吃</span></p>
-								<p><span class="bolds">内容:</span><span class="common_cons">给儿子买的，儿子很喜欢</span></p>
-								<p>赞(12)</p>
-							</dd>
-						</dl>
 					</div>
 				</div>
 				
 				<!--食品专家-->
-				<div class="" id="expert"></div>
+				<div class="expert" id="expert">
+					<h3 class="expert_title">食品网购专家</h3>
+					<ul class="small_ico clear">
+						<li class="expert-1"></li>
+						<li class="expert-2"></li>
+						<li class="expert-3"></li>
+						<li class="expert-4"></li>
+						<li class="expert-5"></li>
+						<li class="expert-6"></li>
+						<li class="expert-7"></li>
+						<li class="expert-8"></li>
+					</ul>
+					<div class="big_ico">
+						<li style="display: block;"><img src="../img/detail/expert_cont_1.jpg"/></li>
+						<li><img src="../img/detail/expert_cont_2.jpg"/></li>
+						<li><img src="../img/detail/expert_cont_3.jpg"/></li>
+						<li><img src="../img/detail/expert_cont_4.jpg"/></li>
+						<li><img src="../img/detail/expert_cont_5.jpg"/></li>
+						<li><img src="../img/detail/expert_cont_6.jpg"/></li>
+						<li><img src="../img/detail/expert_cont_7.jpg"/></li>
+						<li><img src="../img/detail/expert_cont_8.jpg"/></li>
+					</div>
+				</div>
 			</div>
 			
 		</div>
 		
+		<div class="fixed_common">
+			<dl class="last_list">
+				<dt><img src="../img/detail/d11_middle.jpg"/></dt>
+				<dd>
+					<a href="#">20.94%购买:"【自营】好丽友Q蒂榛子巧克力"</a>
+					<p>￥20.90</p>
+				</dd>
+			</dl>
+			<dl class="fix_common">
+				<p>评分:5分</p>
+				<span>内容: 给儿子买的，儿子很喜欢吃那个小蘑菇头，我也很喜欢彩虹</span>
+			</dl>
+		</div>
 			
-		<!--<div id="common_foot"></div>-->
+		<div id="common_foot"></div>
 		
+		<!--模版生成评论-->
+		<script type="text/html" id="common_data">
+			<%for(var i=0;i<data.length;i++) {%>
+				<dl class="common_con clear">
+					<dt>
+						<img src="../img/detail/people.png"/>
+						<i class="bg_line"></i>
+					</dt>
+					<dd>
+						<p class="time"><%= data[i].commenttime%></p>
+						<p>
+							<span class="common_user bolds"><%= data[i].username%></span>
+							<span class="green">普通会员</span>
+						</p>
+						<p><span class="bolds">评分:</span><span class="score">5分</span></p>
+						<p><span class="bolds">标题</span><span class="common_title1">热评好吃</span></p>
+						<p><span class="bolds">内容:</span><span class="common_cons"><%= data[i].comment%></span></p>
+						<p>赞(12)</p>
+					</dd>
+				</dl>
+			<%}%>
+		</script>
+
 	</body>
 </html>

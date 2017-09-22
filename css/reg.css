@@ -3,7 +3,7 @@
   height: 500px;
   margin: 0 auto;
   position: relative;
-  background: url("http://localhost:8080/img/login/content.jpg");
+  background: url("/img/login/content.jpg");
 }
 
 .reg_form {
@@ -98,4 +98,12 @@
 }
 .reg_form .have_code:hover {
   text-decoration: none;
+}
+
+.code {
+  background: green;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  opacity: 0.7;
 }

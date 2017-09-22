@@ -1,9 +1,14 @@
-require(["http://localhost:8080/config.js"],function(){
+require(["/config.js"],function(){
 	require(["jquery","swiper"],function($,swp){
 		$("#common_nav").load("./html/common_top.html",function(){
-			
+			$.getScript("/js/my/common_top.js");
 		});
+		
 		$("#common_foot").load("./html/common_foot.html");
+		//首页大图换成小图
+		setTimeout(function(){
+			$(".top_img img").attr("src","img/index/index_top.jpg");
+		},2000);
 		
 		//中间的大的轮播图
 		var mySwiper = new swp('#swiper-container1',{
@@ -18,8 +23,8 @@ require(["http://localhost:8080/config.js"],function(){
 		
 		//鼠标划到分页器的时候，图片跟着动
 		$('#swiper-container1 .swiper-pagination').on("mouseenter",'span',function(){
-			var index = $(this).index();
-			mySwiper.slideTo(index+1)
+//			var index = $(this).index();
+//			mySwiper.slideTo(index+1)
 		})
 		
 		//当鼠标滑到图片上的时候，出现点击按钮
@@ -77,7 +82,6 @@ require(["http://localhost:8080/config.js"],function(){
 //			}),500)
 //		}
 //		
-		
 		scroll();
 		navInit();
 		back2Top();
@@ -85,6 +89,12 @@ require(["http://localhost:8080/config.js"],function(){
 		function scroll() {
 			$(window).scroll(throttle(function(){
 				var _scrollTop = $(this).scrollTop();
+				if(_scrollTop > 1000) {
+					$(".xiding").fadeIn();
+				}
+				if(_scrollTop < 1000) {
+					$(".xiding").fadeOut();
+				}
 				var floor_count = $(".floor_nav").children().length;
 				if(_scrollTop>1744 && _scrollTop<1744 +floor_count*554) {
 					$(".floor_nav").fadeIn();
@@ -113,7 +123,6 @@ require(["http://localhost:8080/config.js"],function(){
 		}
 		
 		
-		
 		//函数节流的函数
 		function throttle(cbk,delay) {
 			var timeout = null;
@@ -124,8 +133,6 @@ require(["http://localhost:8080/config.js"],function(){
 				},delay);
 			}
 		}
-
-		
-	
 	})
+
 });

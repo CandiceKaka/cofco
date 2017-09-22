@@ -37,6 +37,9 @@
   overflow: hidden;
   margin-bottom: 12px;
 }
+.goods_list li .add_cart {
+  height: 32px;
+}
 .goods_list li .add_cart a {
   margin-top: 10px;
   display: block;

@@ -275,10 +275,12 @@ form .text {
     height: 0;
     
     ul {
+        position: relative;
         background: white;
         width: 452px;
         padding: 8px 14px 4px; 
         border: 1px solid #ccc;
+        z-index: 1000;
     }
     li {
         line-height: 26px;
@@ -289,8 +291,6 @@ form .text {
     }
     
 }
-
-
 
 
 //导航栏
@@ -326,11 +326,11 @@ form .text {
     width: 358px;
     position: absolute;
     right: 346px;
-    top: 234px;
+    top: 334px;
     z-index: 500;
     display: none;
     border: 1px solid green;
-    background: url(../img/common_top/cart_bg.png) center no-repeat;
+    background:white url(/img/common_top/cart_bg.png) center no-repeat;
     text-align: center;
     padding-bottom: 4px;
     p {
@@ -350,7 +350,7 @@ form .text {
     position: absolute;
     left: 48px;
     top:10px;
-    background: url(../img/common_top/index_top_sprites.png) -46px 5px;
+    background: url(/img/common_top/index_top_sprites.png) -46px 5px;
 }
 .nav_count {
     display: inline-block;
@@ -359,7 +359,7 @@ form .text {
     position: absolute;
     top: -15px;
     left: 10px;
-    background: url(../img/common_top/index_top_sprites.png) -10px -40px;
+    background: url(/img/common_top/index_top_sprites.png) -10px -40px;
 }
 
 
@@ -390,6 +390,7 @@ form .text {
     float: left;
     position: absolute;
     z-index: 1000;
+    background: red;
     
 }
 .all_kinds h2 {
@@ -409,8 +410,8 @@ form .text {
 }
 
 .kinds_ul li {
-    height: 40px;
-    line-height: 40px;
+    height: 38px;
+    line-height: 38px;
     padding-left: 20px;
 }
 .kinds_ul li a {
@@ -459,7 +460,7 @@ form .text {
     background: white;
     padding-top: 30px;
     margin-top: 2px;
-    height: 430px;
+    height: 418px;
     border: 1px solid #8cb91e;
     border-left: none;
     display: none;
@@ -508,7 +509,6 @@ form .text {
     height: 100%;
     width: 310px;
     right: -276px;
-//  right: 0px;
     top: 0;
     z-index: 999;
     .left_fixed {
@@ -529,7 +529,7 @@ form .text {
                 display: block;
                 width: 20px;
                 height: 34px;
-                background: url("http://localhost:8080//img/common_top/cart.jpg") -178px 0;
+                background: url("/img/common_top/cart.jpg") -178px 0;
             }
             .one_cart {
                 color: white;
@@ -556,7 +556,7 @@ form .text {
              background: black;
          }
          .fixed_cart:hover em {
-              background: url("http://localhost:8080//img/common_top/cart.jpg") -178px -34px;
+              background: url("/img/common_top/cart.jpg") -178px -34px;
          }
          
          .left_fixed_bottom {
@@ -604,24 +604,103 @@ form .text {
              }
              @for $i from 0 to 5 {
                  .bg-#{$i+1} {
-                     background: url("http://localhost:8080/img/common_top/cart.jpg") -1*33*$i+px 0px;
+                     background: url("/img/common_top/cart.jpg") -1*33*$i+px 0px;
                  }
                  
                  .bg-#{$i+1}:hover {
-                     background: url("http://localhost:8080/img/common_top/cart.jpg") -1*33*$i+px -34px ;
+                     background: url("/img/common_top/cart.jpg") -1*33*$i+px -34px ;
                  }
              }
              
          }
-    
-        
     }
     
     .right_fixed {
+        .red {
+            color: red;
+             }
         background: #e6e6e6;
-        width: 276px;
+        width: 240px;
         height: 100%;
-        float: left;
+        float: right;
+        overflow: auto;
+        padding: 8px 18px 0px;
+        h3 {
+            font-size: 18px;
+            text-align: center;
+            span {
+                float: right;
+                font-size: 22px;
+                margin-top: -6px;
+            }
+        }
+        
+        dl {
+            float: left;
+            margin-top: 16px;
+            height: 52px;
+            width: 240px;
+            dt {
+                a {
+                   display: block;
+                   float: left;
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        border: 1px solid #ccc;
+                    }
+                }
+            }
+            dd {
+                padding-left: 4px;
+                float: left;
+                .cart_title {
+                    width: 170px;
+                    height: 32px;
+                    overflow: hidden;
+                    line-height: 16px;
+                    display: block;
+                }
+                
+                .del {
+                    float: right;
+                }
+            }
+        }
+        
+        .cart_detail {
+           padding-bottom: 100px;
+           overflow: hidden;
+        }
+        
+        .cart_bottom {
+            height: 68px;
+            padding-top: 4px;
+            background: #e6e6e6;
+            position: fixed;
+            z-index: 200;
+            bottom: 0;
+            p {
+                margin-bottom: 6px;
+                .num {
+                    float: left;
+                }
+                .money {
+                    float: right;
+                }
+            }
+            
+            .give {
+                color: white;
+                width: 240px;
+                height: 40px;
+                background: #dd0800;
+                text-align: center;
+                font-size: 16px;
+                line-height: 40px;
+            }
+        }
+        
     }
     
 }
