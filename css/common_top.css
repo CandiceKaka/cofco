@@ -223,7 +223,6 @@ html {
 
 .logo_line {
   height: 154px;
-  background: yellow;
 }
 
 .logo_line h1 {
@@ -320,7 +319,6 @@ form .text {
 .nav_wrap {
   height: 46px;
   border-bottom: 2px solid #318700;
-  background: greenyellow;
 }
 
 .nav_ul li {
@@ -658,7 +656,7 @@ form .text {
   width: 310px;
   right: -276px;
   top: 0;
-  z-index: 999;
+  z-index: 1700;
 }
 .wm_fixed .left_fixed {
   background: black;

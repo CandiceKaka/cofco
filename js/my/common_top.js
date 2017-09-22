@@ -11,7 +11,6 @@ require(['/config.js'],function(){
 			$(".sub_wrap").hide(15);
 		})
 		
-		
 		var $inpText = $(".text");
 		
 		//当搜索框获得焦点的时候，就把里面的内容清空
@@ -60,7 +59,7 @@ require(['/config.js'],function(){
 			}
 		});
 		
-		//右侧固定的额导航栏
+		//右侧固定的导航栏出现与消失
 		$(".fixed_cart").on("click",function(){
 			if( parseInt($(".wm_fixed").css("right"))==0 ) {
 				$(".wm_fixed").animate({"right":"-276px"},500);
@@ -84,9 +83,18 @@ require(['/config.js'],function(){
 				$(target).parent().parent().parent().animate({"right":"-276px"},500);
 			}
 			if(target.className == "del") {
+				var _parent = $(target).parent().children();
 				//被删除的商品的名称
-				var _title = $(target).parent().children().eq(0).text();
+				var _title =_parent.eq(0).text();
 				//删除节点
+				var _money = parseInt(_parent.eq(1).text().substring(1));
+				var _num = parseInt(_parent.eq(3).text());
+				
+				all_num -= _num;
+				all_money -= _num*_money;
+				$(".all_num").text(all_num);
+				$(".all_money").text(all_money);
+				
 				$(target).parent().parent().remove();
 				//从cookie中移除
 				//吧名称和删除的节点名称不相等的数据保留
@@ -96,22 +104,26 @@ require(['/config.js'],function(){
 				
 				var str = JSON.stringify(new_array);
 				//从数组中删除那个元素
-				cookie.set("goods",str,7);
+				cookie.set("goods",str,7,'/');
+				$(".all_num").text(all_num);
+				$(".all_money").text(all_money);
 			}
 			
 			
 		});
 		
-		var all_num = 0;
-		var all_money = 0
-		for(var i=0;i<goods_list.length;i++) {
-			all_num += goods_list[i].num;
-			all_money +=  goods_list[i].goods_price * goods_list[i].num;
-//			console.log((0,goods_list[i].goods_price),Number(goods_list[i].goods_price),goods_list[i].num);
+		//更新购物车的数量和价钱
+		window.all_num = 0;
+		window.all_money = 0;
+		window.count = function(){
+			for(var i=0;i<goods_list.length;i++) {
+				all_num += goods_list[i].num;
+				var money = goods_list[i].goods_price.substring(1);
+				all_money +=  parseInt(money)* parseInt(goods_list[i].num);
+			}
+			$(".all_num").text(all_num);
+			$(".all_money").text(all_money);
 		}
-//		console.log(all_money);
-		
-		$(".all_num").text(all_num);
-		$(".all_money").text(all_money);
+		count();
 	});
 });

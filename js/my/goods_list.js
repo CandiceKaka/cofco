@@ -29,11 +29,13 @@ require(["/config.js"],function(){
 					var target = ev.target;
 					var _parent = target.parentNode.parentNode;
 					add_cart(_parent);
-					
+					all_num += 1;
+					var money = parseInt(_parent.children[1].innerText.substring(1));
+					all_money+=money;
+					$(".all_num").text(all_num);
+					$(".all_money").text(all_money);
 					var goods_list = JSON.parse(cookie.get("goods"));
 					$(".cart_detail").html(tmp.template("cart_list",goods_list));
-						
-					
 				})
 			});
 		});
@@ -64,7 +66,7 @@ require(["/config.js"],function(){
 				list.push(good);
 			}
 			var str = JSON.stringify(list);
-			cookie.set("goods",str,7);
+			cookie.set("goods",str,7,"/");
 		}
 		
 		$("#common_foot").load("./common_foot.html");

@@ -3,8 +3,83 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>cart</title>
+		<link href="../css/reset.css" rel="stylesheet" />
+		<link href="../css/cart.css" rel="stylesheet" />
+		<script src="../js/module/require.js" data-main="../js/my/cart.js"></script>
 	</head>
 	<body>
-		dddd
+		<div class="top center">
+			<div class="top_con clear">
+				<span>你好,欢迎您。</span>
+				<span class="quit">退出</span>
+				<span class="my">我的账户</span>
+			</div>
+		</div>
+		<div class="cart_logo center clear">
+			<h1><a href="#"></a></h1>
+			<span class="status"></span>
+		</div>
+		<div class="my_cart clear center">
+			<h3>我的购物车</h3>
+			<span class="send_to">送至:</span>
+			<div class="address">
+				<span class="fina_address">北京昌平区天通苑区域</span>
+				<div style="display: none;" class="address_wrap">
+					<ul class="fina_chose">
+						<li class="province">
+							北京
+						</li>
+						<li class="city">昌平区</li>
+						<li class="district">天通苑区域</li>
+					</ul>
+					<div class="chose_address clear">
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+		<div class="pay center">
+			<a href="">我买网发货单(6)</a>
+			<a href="#">产地直送单</a>
+			<div class="title_rig">
+				<span>已选商品(含预估费用)</span>
+				<span class="money">67.40</span>
+				<span class="go_pay">去结算</span>
+			</div>
+		</div>
+		
+		<div class="cart_title center clear">
+			<span class="good">商品</span>
+			<span class="price">单价</span>
+			<span class="num">数量</span>
+			<span class="num">重量</span>
+			<span class="num">小计</span>
+			<span class="num">操作</span>
+		</div>
+		<div class="cart_title1 center">
+			<p>订单实付金额满199元，可获赠100元套圈一组，赶紧凑起来吧。详情>></p>
+			<label><input type="checkbox" />常温品</label>
+			<span class="pin">凑单</span><span class="te">"特惠品"不参与优惠券使用~</span>
+			<span class="_count">重量合计0.706kg  金额合计61.40</span>
+		</div>
+		
+		<div class="goods_wrap">
+			
+			
+			
+		</div>
+	
+	
 	</body>
+	<script type="text/html" id="chose_address">
+		<%for(var i=0;i<data.length;i++) {%>
+			<!--data[i][0]记录每个地址的id，然后去找他下面的地址-->
+			<span value="<%= data[i][0]%>">
+				<!--data[i][1]记录地址-->
+				<%= data[i][1]%>
+			</span>
+		<%}%>
+		
+	</script>
 </html>

@@ -1,17 +1,21 @@
 require(["/config.js"],function(){
-	require(["jquery","swiper"],function($,swp){
+	require(["jquery","swiper","cookie"],function($,swp,cookie){
+		
 		$("#common_nav").load("./html/common_top.html",function(){
-			$.getScript("/js/my/common_top.js");
+			$.getScript("./js/my/common_top.js");
 		});
 		
 		$("#common_foot").load("./html/common_foot.html");
 		//首页大图换成小图
-		setTimeout(function(){
-			$(".top_img img").attr("src","img/index/index_top.jpg");
-		},2000);
-		
+			setTimeout(function(){
+				$(".top_img").animate({"height":0},500,function(){
+					$(".top_img img").attr("src","img/index/index_top.jpg");
+					$(".top_img").animate({"height":"100px"});
+				});
+			},1000);
+			
 		//中间的大的轮播图
-		var mySwiper = new swp('#swiper-container1',{
+		var mySwiper1 = new swp('#swiper-container1',{
 			autoplay:2000,
 			effect: "fade",
 			pagination:'.swiper-pagination',
@@ -23,30 +27,21 @@ require(["/config.js"],function(){
 		
 		//鼠标划到分页器的时候，图片跟着动
 		$('#swiper-container1 .swiper-pagination').on("mouseenter",'span',function(){
-//			var index = $(this).index();
-//			mySwiper.slideTo(index+1)
+			console.log(mySwiper1)
+			var index = $(this).index();
+			mySwiper1.slideTo(index+1);
 		})
 		
 		//当鼠标滑到图片上的时候，出现点击按钮
-//		$(".swiper-wrapper").on("mouseenter",function(){
-//			$(".swiper-button-prev").show();
-//			$(".swiper-button-next").show();
-//		});
+		$(".swiper-container").on("mouseenter",function(){
+			$(".swiper-button-prev").show();
+			$(".swiper-button-next").show();
+		});
 //		
-//		$(".swiper-wrapper").on("mouseleave",function(){
-//			$(".swiper-button-prev").hide();
-//			$(".swiper-button-next").hide();
-//		});
-//		
-		
-		//轮播图右侧的选项卡
-		$(".title a").on("mouseenter",function(){
-			$(this).addClass("title_active");
-			$(this).siblings().removeClass("title_active");
-			$(".tab").find("ul").hide();
-			$(".tab ul").eq($(this).index()).show();
-		})
-		
+		$(".swiper-container").on("mouseleave",function(){
+			$(".swiper-button-prev").hide();
+			$(".swiper-button-next").hide();
+		});
 		
 		//每日劲爆轮播图
 		var mySwiper = new swp(".swiper-container2",{
@@ -67,21 +62,27 @@ require(["/config.js"],function(){
 			loop:true,
 		});
 	
+		
 		//楼层的选项卡的切换
 		$(".floor_tab").on("mouseenter",function(){
-			$(".floor_tab_con").eq($(this).index()-2).show();
-			$(".floor_tab_con").eq($(this).index()-2).siblings().hide();
+			var a = $(this).parents(".first_floor").find(".first_right .floor_tab_con");
+			a.eq($(this).index()-2).show();
+			a.eq($(this).index()-2).siblings().hide();
 		});
 		
 		
-		//楼梯导航
-//		function scroll() {
-//			$(window).scroll(
-//				throttle(function(){
-//				console.log(1111);
-//			}),500)
-//		}
-//		
+		
+		//轮播图右侧的选项卡
+		$(".title a").on("mouseenter",function(){
+			$(this).addClass("title_active");
+			$(this).siblings().removeClass("title_active");
+			$(".tab").find("ul").hide();
+			$(".tab ul").eq($(this).index()).show();
+		})
+		
+		
+		
+		
 		scroll();
 		navInit();
 		back2Top();
